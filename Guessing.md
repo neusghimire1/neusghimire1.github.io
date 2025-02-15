@@ -12,6 +12,5 @@ flowchart TD
     E --> A
 
     B --> |Four| F[Correct guess!]
-    end
 ```
 
