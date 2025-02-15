@@ -1,7 +1,17 @@
 ```mermaid
 flowchart TD
-Start([Start]) --> End([End])
+    A([Guess a number]) --> |Ask for integer value| B(Test guess against actual value)
+
+    B --> |One| C[Guess too low]
+    C --> A
+
+    B --> |Two| D[Guess too high]
+    D --> A
+
+    B --> |Three| E[Guess not valid (not an integer or float)]
+    E --> A
+
+    B --> |Four| F[Correct guess!]
+    end
 ```
 
-flowchart LR
-    id1[Guess a number]
