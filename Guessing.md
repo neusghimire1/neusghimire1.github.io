@@ -8,7 +8,7 @@ flowchart TD
     B --> |Two| D[Guess too high]
     D --> A
 
-    B --> |Three| E[Guess not valid (not an integer or float)]
+    B --> |Three| E[Guess not valid, may come from not being an integer or float]
     E --> A
 
     B --> |Four| F[Correct guess!]
