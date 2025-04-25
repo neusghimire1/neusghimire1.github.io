@@ -1,6 +1,6 @@
 function fetchGradeData() {
     console.log("Fetching grade data...")
-    let xhr = new XMLHTTPRequest();
+    let xhr = new XMLHttpRequest();
     let apiroute = "/api/grades";
 
 xhr.onreadystatechange = function () {
