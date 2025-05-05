@@ -3,6 +3,7 @@ function fetchGradeData() {
     let xhr = new XMLHttpRequest();
     let apiroute = "/api/grades";
 
+
 xhr.onreadystatechange = function () {
     let results;
     if (xhr.readyState === xhr.DONE) {
@@ -11,12 +12,14 @@ xhr.onreadystatechange = function () {
                  Status: ${xhr.status}`);
         }
 
+
         populateGradebook(JSON.parse(xhr.responseText));
     }
 }.bind(this);
 xhr.open("get", apiroute, true);
 xhr.send();
 }
+
 
 function populateGradebook(data){
     console.log("Populating gradebook with data:", data);
@@ -38,5 +41,5 @@ function populateGradebook(data){
         });
 }
 
+
 const gradeData = fetchGradeData();
-populateGradebook(gradeData);
